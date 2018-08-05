@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitApiClient {
 
-//    public static final String BASE_URL = "http://94.56.199.34/";
+
     public static final String BASE_URL = "http://api.nytimes.com/svc/mostpopular/v2/mostviewed/all-sections/";
     private static Retrofit retrofit = null;
 

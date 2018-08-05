@@ -53,17 +53,7 @@ public class ArticleItemAdapter extends RecyclerView.Adapter<ArticleItemAdapter.
     public void onBindViewHolder(final ViewHolder holder, final int listPosition) {
         holder.article = articleList.get(listPosition);
 
-//        TextView tvAnnouncementTitle = holder.tvAnnouncementTitle;
-//        if (announcement!=null){
-//            if (announcement.getAnnouncementTitle()!=null && !TextUtils.isEmpty(announcement.getAnnouncementTitle().getValue()))
-//                tvAnnouncementTitle.setText(announcement.getAnnouncementTitle().getValue());
-//
-//            if (announcement.getAnnouncementImage()!=null && !TextUtils.isEmpty(announcement.getAnnouncementImage().getValue())){
-//                displayImage(context,holder.ivAnnouncementImage,announcement.getAnnouncementImage().getValue());
-//            }
-//
-//
-//        }
+
         Result article = articleList.get(listPosition);
 
         if (article.getTitle() != null) {
@@ -73,11 +63,7 @@ public class ArticleItemAdapter extends RecyclerView.Adapter<ArticleItemAdapter.
         }
 
         if (article.getByline() != null) {
-//            SpannableString ss = new SpannableString(article.getByline());
-//            Drawable d = ContextCompat.getDrawable(context, R.drawable.cal_name);
-//            d.setBounds(0, 0, d.getIntrinsicWidth(), d.getIntrinsicHeight());
-//            ImageSpan span = new ImageSpan(d, ImageSpan.ALIGN_BASELINE);
-//            ss.setSpan(span, 0, 3, Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
+
 
             holder.tvArticleAuthor.setText(""+article.getByline());
 
@@ -91,7 +77,7 @@ public class ArticleItemAdapter extends RecyclerView.Adapter<ArticleItemAdapter.
             holder.tvDate.setText("");
         }
         if (article.getUrl() != null) {
-//            displayImage(context,holder.ivArticleImage,article.getUrl());
+
             holder.ivArticleImage.setCircleBackgroundColorResource(R.color.grey);
 
         }
@@ -101,22 +87,11 @@ public class ArticleItemAdapter extends RecyclerView.Adapter<ArticleItemAdapter.
     }
     private void displayImage(Context c, ImageView iv, String url){
 
-//        DisplayImageOptions options = new DisplayImageOptions.Builder()
-//               .resetViewBeforeLoading(true).build();
-
         ImageLoader imageLoader = ImageLoader.getInstance();
 
         imageLoader.displayImage(url, iv);
 
-//        Glide.with(c).load(url)
-//                /*.thumbnail(0.5f)*/
-//                .crossFade()
-//
-//                .override(1200,600)
-//                .placeholder(R.drawable.placeholder)
-//                .diskCacheStrategy(DiskCacheStrategy.ALL)
-//                .into(iv);
-    }
+   }
     // Static inner class to initialize the views of rows
     static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public TextView tvArticleTitle;
@@ -137,9 +112,6 @@ public class ArticleItemAdapter extends RecyclerView.Adapter<ArticleItemAdapter.
         }
         @Override
         public void onClick(View view) {
-//            int position = getLayoutPosition();
-//            Announcement announcement = announcmentList.get(position);
-
             String announcementHtml = article.getUrl();
             if (!TextUtils.isEmpty(announcementHtml)){
                 Intent i = new Intent(context, WebViewActivity.class);
@@ -149,7 +121,6 @@ public class ArticleItemAdapter extends RecyclerView.Adapter<ArticleItemAdapter.
                 Toast.makeText(context,"No data found.",Toast.LENGTH_LONG);
             }
 
-            //Log.d("onclick", "onClick " + getLayoutPosition() + " " + item.getText());
         }
     }
 }
