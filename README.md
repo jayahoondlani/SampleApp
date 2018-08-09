@@ -7,3 +7,13 @@ Installation steps:
 2) In case it has to be installed using Android system, the code should be imported to Android Studio, then clean the project , build the project and then Run on device.
 
 There may be some improvements in the source code.
+
+Date : 09-08-2018
+
+Few changes done in code as a part of improvements like displaying image
+
+Added Test Cases
+1) To check Internet Connection is available.
+2) To check where list of news item is available
+3) To check data is shown in view 
+4) To check a click is proper or not.
