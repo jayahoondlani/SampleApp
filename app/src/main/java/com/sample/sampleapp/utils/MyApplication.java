@@ -5,9 +5,8 @@ import android.app.Application;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
-import com.sample.sampleapp.MainActivity;
 
-
+/** This class is used to initialize and create universal image loader instance*/
 public class MyApplication extends Application {
 
     @Override
@@ -15,7 +14,7 @@ public class MyApplication extends Application {
         super.onCreate();
         initImageLoader();
     }
-
+        // initializing image loader
     private void initImageLoader(){
 
         DisplayImageOptions imgOptions = new DisplayImageOptions.Builder()

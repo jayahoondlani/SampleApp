@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class Results {
+public class ArticleResponse {
 
     @SerializedName("status")
     @Expose

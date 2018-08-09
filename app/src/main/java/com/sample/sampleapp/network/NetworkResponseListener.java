@@ -1,14 +1,10 @@
 package com.sample.sampleapp.network;
 
-import com.sample.sampleapp.pojo.Results;
-
-/**
- * Created by jaya-pc on 6/14/2018.
- */
-
+import com.sample.sampleapp.pojo.ArticleResponse;
+/** This interface is used for accessing data and assigning it into models. */
 public interface NetworkResponseListener {
 
-   void onSuccess(Results articles);
+   void onSuccess(ArticleResponse articles);
     void onFailure(String errorMsg);
 
 }
